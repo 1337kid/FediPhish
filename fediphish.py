@@ -32,7 +32,7 @@ def banner():
  |_|  \___|\__,_|_|_|   |_| |_|_|___/_| |_| 
 *                                          *
   Phish the Fediverse :)                    
-         v1.1    @1337vrt   doge xD         \033[0m''')
+         v1.1    @1337kid   doge xD         \033[0m''')
 
 def intro():
     banner()
