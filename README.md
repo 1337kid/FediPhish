@@ -1,6 +1,9 @@
 # FediPhish
 ![made with python](https://raw.githubusercontent.com/1337vrt/FediPhish/main/img/made-with-python.svg)
 ![hardstyle](https://raw.githubusercontent.com/1337vrt/FediPhish/main/img/made-with-hardstyle.svg)
+
+Just a phishing tool that focuses only on [Federated Universe/Fediverse](https://en.wikipedia.org/wiki/Fediverse).<br>
+You are gonna love this xD
 ## Legal disclaimer:
 ```
 Usage of FediPhish for attacking targets without prior mutual consent is illegal. 
