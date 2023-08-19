@@ -1,0 +1,114 @@
+<!DOCTYPE html >
+<html prefix="og: http://ogp.me/ns#">
+<head>
+  <title>Hubzilla</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<base href="/" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0" />
+<meta name="application-name" content="hubzilla" />
+<meta name="generator" content="hubzilla" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?v=6.5.12" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/bootstrap-red.css?v=6.5.12" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/default.css?v=6.5.12" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/mod_home.css?v=6.5.12" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/style.pcss?v=6.5.12" type="text/css" media="screen">
+<link rel="shortcut icon" href="/hz-32.png" />
+
+
+</head>
+<body  >
+		<header></header>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+	<div class="container-fluid flex-nowrap">
+				<div class="d-lg-none pt-1 pb-1">
+						<a class="btn btn-primary btn-sm text-white" href="#" title="Sign in" id="login_nav_btn_collapse" data-bs-toggle="modal" data-bs-target="#nav-login">
+				Login
+			</a>
+									<a class="btn btn-warning btn-sm text-dark" href="register" title="Create an account" id="register_nav_btn" >
+				Register
+			</a>
+					</div>
+				
+		<div class="navbar-toggler-right">
+						<button id="expand-aside" type="button" class="d-lg-none navbar-toggler border-0">
+				<i class="fa fa-arrow-circle-right" id="expand-aside-icon"></i>
+			</button>
+						<button id="menu-btn" class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#app-bin">
+				<i class="fa fa-bars"></i>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse justify-content-between" id="navbar-collapse-1">
+			<ul class="navbar-nav">
+								<li class="nav-item d-lg-flex">
+										<a class="nav-link" href="#" title="Sign in" id="login_nav_btn" data-bs-toggle="modal" data-bs-target="#nav-login">
+					Login
+					</a>
+									</li>
+												<li class="nav-item  d-lg-flex">
+					<a class="nav-link" href="register" title="Create an account" id="register_nav_btn">Register</a>
+				</li>
+											</ul>
+
+			<div id="banner" class="navbar-text"><i class="fa fa-hubzilla"></i> HUB<i>zilla</i></div>
+
+			<ul id="nav-right" class="navbar-nav">
+
+			</ul>
+		</div>
+			</div>
+</nav>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="app-bin" aria-labelledby="app-bin-label">
+	<div class="offcanvas-header">
+		<div class="lh-1" id="app-bin-label">
+					</div>
+		<i id="app-bin-trash" class="fa fa-2x fa-fw fa-trash-o d-none"></i>
+		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body pt-0">
+								<div class="dropdown-header text-uppercase">
+			System Apps
+		</div>
+
+					</div>
+</div>
+</nav>
+	<main>
+		<div class="content">
+			<div class="columns">
+				<aside id="region_1"><div class="aside_spacer_top_left"></div><div class="aside_spacer_left"><div id="left_aside_wrapper" class="aside_wrapper"></div></div></aside>
+				<section id="region_2"><h1 class="home-welcome">Welcome to Hubzilla</h1><form action="/login.php" id="main-login" method="post" >
+	<input type="hidden" name="auth-params" value="login" />
+	<div id="login-main" class="d-grid gap-2">
+			<div id="id_username_wrapper" class="mb-3">
+		<label for="id_username" id="label_username">Nickname</label>
+		<input class="form-control" name="user" id="id_username" type="text" value="">
+		<small id="help_username" class="form-text text-muted"></small>
+	</div>
+			<div class="mb-3">
+		<label for="id_password">Password</label>
+		<input class="form-control" type="password" name="pass" id="id_password" value="">		<small id="help_password" class="form-text text-muted"></small>
+	</div>
+			<div id="remember_container" class="clearfix onoffswitch checkbox mb-3">
+		<label for="id_remember">Remember me</label>
+		<div class="float-end"><input type="checkbox" name="remember" id="id_remember" value="1"   /><label class="switchlabel" for='id_remember'> <span class="onoffswitch-inner" data-on='Yes' data-off='No'></span><span class="onoffswitch-switch"></span></label></div>
+		<small class="form-text text-muted"></small>
+	</div>
+		<button type="submit" name="submit" class="btn btn-primary">Login</button>
+		<a href="#" title="Create an account to access services and applications" id="register-link" class="float-end">Register</a>		<hr>
+		<a href="rmagic" class="btn btn-outline-success">Remote Authentication</a>
+	</div>
+			<input type="hidden" name="0" value="" />
+	</form>
+
+					<div id="page-footer"></div>
+					<div id="pause"></div>
+				</section>
+				<aside id="region_3" class="d-none d-xl-block"><div class="aside_spacer_top_right"></div><div class="aside_spacer_right"><div id="right_aside_wrapper" class="aside_wrapper"></div></div></aside>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>

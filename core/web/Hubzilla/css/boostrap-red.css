@@ -1,0 +1,86 @@
+/* override some bootstrap settings */
+
+/* scroll-behavior smooth is behaving weird on mobile devices. */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: unset;
+  }
+}
+
+/* nav overrides */
+
+nav .badge {
+	position: absolute;
+	font-size: 0.75rem;
+}
+
+nav .dropdown-menu {
+	min-width: 16rem;
+}
+
+.nav-item.nav-item-hack {
+	height: 2.3rem;
+}
+
+.navbar-toggler-right {
+	padding: 0.2rem 0;
+	white-space: nowrap;
+}
+
+/* this fixes ellipsis for too long nav banner */
+#navbar-collapse-1 {
+	min-width: 0;
+}
+
+#navbar-collapse-1 i {
+	font-size: 1.0rem;
+}
+
+nav .dropdown-menu {
+	max-height: 70vh;
+	overflow: auto;
+}
+
+#navbar-collapse-2 {
+	flex-basis: 100%;
+	max-height: 70vh;
+}
+
+#navbar-collapse-2.show {
+	overflow: auto;
+}
+
+
+#navbar-collapse-2.collapsing .dropdown-header,
+#navbar-collapse-2.show .dropdown-header {
+	padding: 0.5rem 0.1rem;
+}
+
+.navbar-dark .navbar-toggler {
+	color: rgba(255,255,255,1);
+}
+
+/* offcanvas */
+.offcanvas,
+.offcanvas-backdrop.fade {
+	transition: none;
+}
+
+.offcanvas-end {
+	width: unset;
+	min-width: 250px;
+}
+
+/* nav overrides end */
+
+label {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.mark {
+	background-color: yellow;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-hidesensitive="true">
+ <head>
+  <title>Login - gnusocial.net</title>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="/css/base.css?version=2.0.1-beta0" media="screen, projection, tv, print"/>
+  <link rel="stylesheet" type="text/css" href="/css/display.css?version=2.0.1-beta0" media="screen, projection, tv, print"/>
+  <style type="text/css" media="">
+/* default no show */
+html .tagcontainer > footer > .attachments > .inline-attachment > .attachment-wrapper > .sensitive-blocker {
+    display: none;
+}
+
+html[data-hidesensitive='true'] .tagcontainer.data-tag-nsfw > footer > .attachments > .inline-attachment > .attachment-wrapper > .sensitive-blocker {
+display: block;
+/* hugh, two magic numbers below, sorry :( */
+width: 98%;
+height: 90%;
+position: absolute;
+/* z-index: 100; */
+/* background-color: #d4baba; */
+background-color: black;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: contain;
+transition: opacity 1s ease-in-out;
+}
+
+html[data-hidesensitive='true'] .tagcontainer.data-tag-nsfw > footer > .attachments > .inline-attachment > .attachment-wrapper > .sensitive-blocker.reveal {
+    opacity: 0;
+}
+</style>
+ </head>
+ <body id="login">
+  <div id="wrap">
+   <div id="header">
+    <address id="site_contact" class="h-card">
+     <a class="home bookmark" href="/">
+      <img class="logo u-photo p-name" src="/logo.png" alt="gnusocial.net"/>
+     </a>
+    </address>
+    <div id="site_nav_global_primary">
+     <form id="header-search" class="form" method="get" action="/">
+      <fieldset>
+       <input name="q" size="20" id="search-q"/>
+       <input type="submit" value="Search"/>
+      </fieldset>
+     </form>
+     <ul class="nav">
+      <li id="nav_login">
+       <a href="/" title="Login to the site.">Login</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div id="core">
+    <div id="aside_primary_wrapper">
+     <div id="content_wrapper">
+      <div id="site_nav_local_views_wrapper">
+       <div id="site_nav_local_views">
+        <ul class="nav">
+         <li class="current">
+          <a href="/" title="Login with a username and password">Login</a>
+         </li>
+         <li>
+          <a href="#" title="Sign up for a new account">Register</a>
+         </li>
+         <li>
+          <a href="#" title="Login or register with OpenID.">OpenID</a>
+         </li>
+        </ul>
+       </div>
+       <div id="content">
+        <h1>Login</h1>
+        <div id="page_notice" class="system_notice"><p>Login with your username and password. Don't have a username yet? <a href="#">Register</a> a new account.</p>
+<p>(Have an <a href="#">OpenID</a>? Try our <a href="#">OpenID login</a>!)</p>
+</div>
+        <div id="content_inner">
+         <form method="post" id="form_login" class="form_settings" action="login.php">
+          <fieldset>
+           <legend>Login to site</legend>
+           <ul class="form_data">
+            <li>
+             <label for="nickname">Username or email address</label>
+             <input type="text" id="nickname" name="user" placeholder="Username or email address"/>
+            </li>
+            <li>
+             <label for="password">Password</label>
+             <input name="pass" type="password" class="password" id="password"/>
+            </li>
+            <li>
+             <input name="rememberme" type="checkbox" class="checkbox" id="rememberme" value="true"/>
+              <label class="checkbox" for="rememberme">Remember me</label>
+              <p class="form_guide">Automatically login in the future; not for shared computers!</p>
+            </li>
+           </ul>
+           <input type="submit" id="submit" name="submit" class="submit" value="Login" title=""/>
+          </fieldset>
+         </form>
+         <p>
+          <a href="#">Lost or forgotten password?</a>
+         </p>
+        </div>
+       </div>
+       <div id="aside_primary" class="aside">
+        <div id="site_nav_object" class="section"></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="footer">
+    <ul class="nav" id="site_nav_global_secondary">
+     <li>
+      <a href="#">Help</a>
+     </li>
+     <li>
+      <a href="#">About</a>
+     </li>
+     <li>
+      <a href="#">FAQ</a>
+     </li>
+     <li>
+      <a href="#">TOS</a>
+     </li>
+     <li>
+      <a href="#">Privacy</a>
+     </li>
+     <li>
+      <a href="#">Source</a>
+     </li>
+     <li>
+      <a href="#">Version</a>
+     </li>
+     <li>
+      <a href="#">Contact</a>
+     </li>
+    </ul>
+<p><strong>gnusocial.net</strong> is a social network, courtesy of <a href="#">elbinario.net</a>. It runs on <a href="#">GNU social</a>, version 2.0.1-beta0, available under the <a href="#">GNU Affero General Public License</a>.</p>
+    <p>
+     <img id="license_cc" src="https://gnusocial.net/theme/licenses/cc_by_3.0_80x15.png" alt="Creative Commons Attribution 3.0" width="80" height="15"/>
+ All gnusocial.net content and data are available under the <a class="license" rel="external license" href="#">Creative Commons Attribution 3.0</a> license.</p>
+   </div>
+  </div>
+ </body>
+</html>
+

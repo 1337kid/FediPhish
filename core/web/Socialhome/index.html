@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sign In</title>
+    <meta name="description" content="A federated social home"/>
+    <link rel="icon" type="image/png" href="/Socialhome-dark-96.722d26f6ac1e.png">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <link href="/css/project.3ab86cb82e97.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+        <div class="container navbar-container">
+            <a class="navbar-brand" href="/"><img src="/Socialhome-light-24.1e156bc135d9.png" class="mr-2"><span class="align-middle">Socialhome</span></a>
+            <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#top-navbar" aria-controls="top-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse mx-auto" id="top-navbar">
+                <ul class="navbar-nav mx-auto w-100 justify-content-end text-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="navbar-streams" href="#">Streams</a>
+                        <div class="dropdown-menu" aria-labelledby="navbar-streams">
+                            
+                            <a class="dropdown-item" href="#">Local</a>
+                            <a class="dropdown-item" href="#">Public</a>
+                        </div>
+                    </li>
+                    
+                        <li class="nav-item">
+                            <a id="sign-up-link" class="nav-link" href="#">
+                                Sign Up
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="log-in-link" class="nav-link" href="/">Log In</a>
+                        </li>
+                    
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="navbar-menu" href="#">
+                            <i class="fa fa-gear" aria-label="Menu"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbar-menu">
+                            
+                            
+                                <a class="dropdown-item" href="#">Privacy policy</a>
+                            
+                            
+                                <a class="dropdown-item" href="#">Terms of service</a>
+                            
+                        </div>
+                    </li>
+
+                    <form id="search-form" class="form-inline ml-2" method="get" action="#">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control" type="text" name="q" placeholder="Search" value="">
+                            <span class="input-group-btn">
+                                <button class="btn btn-light" type="submit" aria-label="Search" title="Search"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container container">
+        
+
+        
+  <div class="row">
+    <div class="col-md-5">
+      <h2>Sign In</h2>
+      
+      
+
+      <form class="login" method="POST" action="/login.php">
+        
+
+<div id="div_id_login" class="form-group"> <label for="id_login" class=" requiredField">
+                Login<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="user" placeholder="Username or e-mail" autocomplete="email" class="textinput textInput form-control" required id="id_login"> </div> </div> <div id="div_id_password" class="form-group"> <label for="id_password" class=" requiredField">
+                Password<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="pass" placeholder="Password" autocomplete="current-password" class="textinput textInput form-control" required id="id_password"> </div> </div> <div class="form-group"> <div id="div_id_remember" class="form-check"> <input type="checkbox" name="remember" class="checkboxinput form-check-input" id="id_remember"> <label for="id_remember" class="form-check-label">
+                    Remember Me
+                </label> </div> </div>
+
+        
+        <button id="sign-in-button" class="btn btn-primary" type="submit">Sign In</button>
+        <a class="button secondaryAction" href="#">Forgot Password?</a>
+      </form>
+    </div>
+  </div>
+
+
+    </div> 
+    
+</body>
+</html>
+
+

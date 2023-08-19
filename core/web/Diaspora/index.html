@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link rel="stylesheet" media="all" href="/css/main.css" />
+<title>
+diaspora - Sign in
+</title>
+<meta charset='utf-8'>
+<meta name="description" content="diasporg is one of many diaspora pods in the fediverse. Founded on Decentralization, Freedom, and Privacy this diaspora* pod has been around more than 10 years." />
+<meta property="description" content="diasporg is one of many diaspora pods in the fediverse. Founded on Decentralization, Freedom, and Privacy this diaspora* pod has been around more than 10 years." />
+<link href='/apple-touch-icon-9f7c9cc3923b4817fbb25bfeb0dd5fd34638827fd9c82b5a03f7b68e6e90806f.png' rel='apple-touch-icon'>
+<link href='/favicon-6c483382d6196fb46215c44e6bdaffcdd019cc0a8e12fd1a1b62356721de1476.png' rel='shortcut icon'>
+</head>
+<body class='page-sessions action-new'>
+<header>
+<div class='dark-header'>
+<nav class='navbar navbar-inverse navbar-fixed-top'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-12'>
+<div class='not-connected-menu'>
+<div class='navbar-header navbar-left'>
+<div class='hidden-xs'>
+<a class="navbar-brand" href="/">diaspora</a>
+</div>
+<div class='visible-xs-block header-title'>
+<a class="navbar-brand" href="/"><img class="img-responsive" src="/asterisk_white_mobile-6e8e6a9049758f5f3b615e3ff56b1bfefcddc454e3ddd07a78754219639b089c.png" /></a>
+</div>
+</div>
+<ul class='nav navbar-nav navbar-right'>
+<li><a class="login" href="#">Create account</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<div class='container' id='login'>
+<div class='text-center'>
+<div class='logos-asterisk'></div>
+<h1>
+diaspora
+</h1>
+</div>
+<form class="block-form" id="new_user" action="/login.php" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><fieldset>
+<label class='sr-only' for='user_username' id='usernameLabel'>
+Username
+</label>
+<i class='entypo-user'></i>
+<input placeholder="Username" class="input-block-level form-control" required="required" pattern="[A-Za-z0-9_.@-]+" autocapitalize="none" autocorrect="off" autofocus="autofocus" aria-labelledby="usernameLabel" type="text" name="user" id="user_username" />
+<label class='sr-only' for='user_password' id='passwordLabel'>
+Password
+</label>
+<i class='entypo-lock'></i>
+<input placeholder="Password" class="input-block-level form-control" required="required" autocapitalize="none" autocorrect="off" aria-labelledby="passwordLabel" type="password" name="pass" id="user_password" />
+</fieldset>
+<input type="submit" name="commit" value="Sign in" class="btn btn-large btn-block btn-primary" data-disable-with="Sign in" />
+</form>
+<div class='text-center'>
+<a id="forgot_password_link" href="#">Forgot your password?</a>
+<br>
+<a href="/register">Create account</a>
+</div>
+</div>
+
+<footer class='footer'>
+<div class='container'>
+<div class='powered-by-diaspora pull-left'>
+<a href="#">Powered by diaspora*</a>
+</div>
+<ul class='pull-right' id='footer_nav'>
+<li><a href="#">Tor</a></li>
+<li><a href="#">i2p</a></li>
+<li><a href="#">diaspora*</a></li>
+<li><a href="#">Status/Support</a></li>
+<li><a href="#">Fediverse Observer</a></li>
+<li><a href="#">Project discussions and support</a></li>
+<li><a title="Download the source code package" href="https://gitlab.com/diasporg/diaspora">Code 0.7.15.99</a></li>
+<li><a href="#">Switch to touch-optimized mode</a></li>
+<li><a href="#">Terms</a></li>
+
+</ul>
+</div>
+</footer>
+
+
+<div class='blueimp-gallery blueimp-gallery-controls' id='blueimp-gallery'>
+<div class='slides'></div>
+<a class='prev'>
+<div class='entypo-chevron-small-left'></div>
+</a>
+<a class='next'>
+<div class='entypo-chevron-small-right'></div>
+</a>
+<a class='close'>
+<div class='entypo-cross'></div>
+</a>
+<a class='play-pause'></a>
+<ol class='indicator'></ol>
+</div>
+<div id='flash-container'></div>
+<a class='entypo-chevron-up back-to-top' href='#' id='back-to-top' title='Back to top'></a>
+</body>
+</html>
