@@ -13,8 +13,11 @@ for any misuse or damage caused by this program.
 ```
 ## Installation & Usage
 ```
-git clone https://github.com/1337vrt/FediPhish.git && cd FediPhish
-python3 FediPhish.py
+git clone https://github.com/1337vrt/FediPhish.git
+cd FediPhish
+chmod +x install.sh
+./install.sh
+fediphish
 ```
 ![FediPhish](https://raw.githubusercontent.com/1337vrt/FediPhish/main/img/FP.png)
 ![FediPhish](https://raw.githubusercontent.com/1337vrt/FediPhish/main/img/FP1.png)
